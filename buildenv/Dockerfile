@@ -1,0 +1,12 @@
+FROM randomdude/gcc-cross-x86_64-elf
+
+RUN apt-update
+RUN apt-upgrate -y
+RUN apt-get install -y nasm
+RUN apt-get install -y xorriso
+RUN apt-get install -y grub-pc-bin
+RUN apt-get install -y grub-common
+
+
+VOLUME /root/env
+WORKDIR /root/env
